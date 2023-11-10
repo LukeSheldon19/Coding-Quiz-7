@@ -1,1 +1,4 @@
-# Coding-Quiz-7
+The time Complexity for the Time Complexity of Algorithms problem is O(n^2). This is because at worst we must iterate over n elements with nested loops, meaning that we could get a worst case time complexity of 
+O(n^2). The space complexity is constant,O(1), as everything is sorted in place and nothing is stored.
+
+The Ice Cream Parlor Variation implements a recursive algorithm to count combinations of two elements from a list that sum up to a target value. The countRecursive function iterates through the list, considering both cases where the current element is included and excluded in the combination. The algorithm has a base case for terminating recursion when the target sum and count criteria are met. The recursive algorithm navigates through the list, considering each element as a potential inclusion or exclusion in the combination, updating the remaining target value, index, and count accordingly. The function terminates when a valid combination of two elements is found, or when the end of the list is reached.
