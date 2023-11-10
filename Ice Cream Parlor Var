@@ -1,0 +1,21 @@
+class Result {
+    public static int countIcecreamCombinations(int m, List<Integer> arr) {
+        return countRecursive(arr, m, 0, 0);
+    }
+
+    private static int countRecursive(List<Integer> arr, int remaining, int index, int count) {
+        if (remaining == 0 && count == 2) {
+            return 1; 
+        }
+
+        if (index >= arr.size() || remaining < 0 || count > 2) {
+            return 0; 
+        }
+
+        int countWithCurrent = countRecursive(arr, remaining - arr.get(index), index + 1, count + 1);
+
+        int countWithoutCurrent = countRecursive(arr, remaining, index + 1, count);
+
+        return countWithCurrent + countWithoutCurrent;
+    }
+}
